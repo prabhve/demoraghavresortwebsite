@@ -6,11 +6,8 @@ import {
   Menu, 
   X, 
   Star, 
-  Sparkles,
-  ShieldCheck,
-  CalendarCheck,
-  Crown,
-  Navigation,
+  Crown, 
+  Navigation, 
   ArrowRight
 } from 'lucide-react';
 import { RESORT_INFO, buildWhatsAppLink } from '../data/resortData';
@@ -49,19 +46,19 @@ export const Navbar: React.FC<NavbarProps> = () => {
 
   const navLinks = [
     { label: 'Home', href: '#' },
-    { label: 'About Us', href: '#about' },
+    { label: 'About', href: '#about' },
     { label: 'Amenities', href: '#amenities' },
-    { label: 'Venues & Spaces', href: '#venues' },
-    { label: 'Swimming Pool', href: '#pool' },
-    { label: 'Packages & Rates', href: '#packages' },
-    { label: 'Photo Gallery', href: '#gallery' },
-    { label: 'Location & Map', href: '#location' },
+    { label: 'Venues', href: '#venues' },
+    { label: 'Pool', href: '#pool' },
+    { label: 'Packages', href: '#packages' },
+    { label: 'Gallery', href: '#gallery' },
+    { label: 'Location', href: '#location' },
   ];
 
   return (
     <header className="sticky top-0 z-40 w-full">
       {/* Top Notice Bar (Clean, Royal & Dignified) */}
-      <div className="bg-[#02060c] text-amber-200/90 text-xs py-1.5 px-4 border-b border-amber-500/20 hidden md:block">
+      <div className="bg-[#02060c] text-amber-200/90 text-xs py-1.5 px-4 sm:px-6 lg:px-8 border-b border-amber-500/20 hidden md:block">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           
           {/* Left: Key Highlights */}
@@ -75,7 +72,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
             </span>
             <span className="text-amber-500/30">•</span>
             <span className="inline-flex items-center gap-1 text-amber-400 font-semibold">
-              <MapPin className="w-3 h-3 text-rose-400" />
+              <MapPin className="w-3.5 h-3.5 text-rose-400" />
               <span>SH-38 Unnao-Kanpur Highway</span>
             </span>
           </div>
@@ -88,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 transition-colors font-semibold"
             >
-              <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+              <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
               <span>3.9★ Google (790+ Reviews)</span>
             </a>
 
@@ -110,43 +107,43 @@ export const Navbar: React.FC<NavbarProps> = () => {
       <nav
         className={`w-full transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#040912]/95 backdrop-blur-xl border-b border-amber-500/25 shadow-2xl py-2.5'
+            ? 'bg-[#040912]/95 backdrop-blur-xl border-b border-amber-500/25 shadow-2xl py-2 sm:py-2.5'
             : 'bg-[#040912]/90 backdrop-blur-md border-b border-amber-500/15 py-2.5 sm:py-3'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           
-          {/* Brand Logo & Typography (Spacious & Clean on all screens) */}
-          <a href="#" className="flex items-center gap-2.5 sm:gap-3 group shrink min-w-0">
+          {/* Brand Logo & Full Name - Completely UN-TRUNCATED and SHIELDED */}
+          <a href="#" className="flex items-center gap-3 group shrink-0 whitespace-nowrap">
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-amber-400 via-amber-500 to-amber-700 p-[1.5px] shadow-[0_0_12px_rgba(245,158,11,0.25)] group-hover:scale-105 transition-transform shrink-0">
               <div className="w-full h-full rounded-[10px] bg-[#040912] flex items-center justify-center">
                 <Crown className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 group-hover:rotate-6 transition-transform" />
               </div>
             </div>
-            <div className="min-w-0">
-              <span className="text-base sm:text-lg md:text-xl font-serif-luxury font-black tracking-wide text-white group-hover:text-amber-300 transition-colors block leading-tight truncate">
+            <div className="shrink-0 flex flex-col justify-center">
+              <span className="text-base sm:text-lg lg:text-xl font-serif-luxury font-black tracking-wide text-white group-hover:text-amber-300 transition-colors block leading-tight whitespace-nowrap">
                 Raghav Resort
               </span>
-              <span className="text-[8.5px] sm:text-[9.5px] tracking-wider text-amber-400 font-bold uppercase block truncate">
+              <span className="text-[9px] sm:text-[10px] tracking-wider text-amber-400 font-bold uppercase block whitespace-nowrap">
                 Lawn • Banquet • Pool • Rooms
               </span>
             </div>
           </a>
 
-          {/* Desktop Navigation Links (Visible on Large screens) */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-7">
+          {/* Desktop Navigation Links - Perfectly Balanced & Spaced */}
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-7 shrink-0">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-semibold text-slate-200 hover:text-amber-300 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-amber-400 after:to-amber-600 hover:after:w-full after:transition-all whitespace-nowrap"
+                className="text-xs lg:text-[13px] xl:text-sm font-semibold text-slate-200 hover:text-amber-300 transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-amber-400 after:to-amber-600 hover:after:w-full after:transition-all whitespace-nowrap"
               >
                 {link.label}
               </a>
             ))}
           </div>
 
-          {/* Desktop Action CTAs (Hidden on Mobile) */}
+          {/* Right Action CTAs on Desktop */}
           <div className="hidden lg:flex items-center gap-2.5 shrink-0">
             {/* Direct Call Button */}
             <a
@@ -169,12 +166,12 @@ export const Navbar: React.FC<NavbarProps> = () => {
             </a>
           </div>
 
-          {/* Mobile Action Controls (Clean, Uncluttered, Spaced with 0 Overflow) */}
+          {/* Mobile Action Controls (Clean, Uncluttered, Spaced) */}
           <div className="flex items-center gap-2 lg:hidden shrink-0">
             {/* Direct Dial Icon Button */}
             <a
               href={`tel:${RESORT_INFO.phones[0].number}`}
-              className="p-2 rounded-xl bg-[#081322] active:scale-95 text-amber-400 border border-amber-500/30 hover:bg-[#0d1f38] transition-all shadow-sm flex items-center justify-center"
+              className="p-2 sm:p-2.5 rounded-xl bg-[#081322] active:scale-95 text-amber-400 border border-amber-500/30 hover:bg-[#0d1f38] transition-all shadow-sm flex items-center justify-center"
               aria-label="Call Raghav Resort"
               title="Call Desk"
             >
@@ -184,7 +181,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
             {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl bg-[#081322] active:scale-95 text-amber-300 border border-amber-500/30 hover:bg-[#0d1f38] transition-all shadow-sm flex items-center justify-center cursor-pointer"
+              className="p-2 sm:p-2.5 rounded-xl bg-[#081322] active:scale-95 text-amber-300 border border-amber-500/30 hover:bg-[#0d1f38] transition-all shadow-sm flex items-center justify-center cursor-pointer"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-4 h-4 text-amber-400" /> : <Menu className="w-4 h-4" />}
