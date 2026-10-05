@@ -1,0 +1,8 @@
+{
+  "name": "Raghav Resort - Luxury Lawn, Banquet & Pool",
+  "description": "Raghav Resort, Unnao-Kanpur Highway. Premium wedding lawn for up to 1000 guests, 2 AC banquet halls, swimming pool, and luxury rooms with direct WhatsApp booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

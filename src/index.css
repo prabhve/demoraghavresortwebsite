@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-canvas: #040912;
+    --color-navy: #081322;
+    --color-navy-dark: #02060b;
+    --color-gold: #f59e0b;
+    --color-gold-bright: #fbbf24;
+    --color-emerald: #059669;
+    --color-emerald-soft: #10b981;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #040912;
+    color: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+.font-serif-luxury {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-display-festive {
+  font-family: 'Rozha One', 'Cinzel', serif;
+}
+
+/* 24K Imperial Liquid Gold Gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #fffdf5 0%, #fef08a 25%, #f59e0b 55%, #d97706 80%, #b45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle Champagne Gold Gradient */
+.text-champagne-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #fef3c7 40%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Elegant Luxury WhatsApp Button */
+.btn-whatsapp-luxury {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  box-shadow: 0 4px 14px rgba(4, 120, 87, 0.25);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  touch-action: manipulation;
+}
+
+.btn-whatsapp-luxury:hover {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-color: rgba(110, 231, 183, 0.5);
+  box-shadow: 0 6px 18px rgba(4, 120, 87, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-whatsapp-luxury:active {
+  transform: scale(0.97);
+}
+
+/* 24K Imperial Gold Button */
+.btn-gold-luxury {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  color: #030712;
+  font-weight: 800;
+  border: 1px solid rgba(254, 240, 138, 0.5);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  touch-action: manipulation;
+}
+
+.btn-gold-luxury:hover {
+  background: linear-gradient(135deg, #fef08a 0%, #fbbf24 50%, #f59e0b 100%);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-gold-luxury:active {
+  transform: scale(0.97);
+}
+
+/* Obsidian Glass Button */
+.btn-glass-luxury {
+  background: rgba(10, 21, 38, 0.85);
+  color: #fde68a;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+  touch-action: manipulation;
+}
+
+.btn-glass-luxury:hover {
+  background: rgba(15, 31, 56, 0.95);
+  border-color: rgba(245, 158, 11, 0.55);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-glass-luxury:active {
+  transform: scale(0.97);
+}
+
+/* Hide Scrollbar for Mobile Carousel / Tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 3D Perspective and Card Hover Classes */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Radiant Royal Ambient Mesh Background */
+.bg-radial-regal {
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(245, 158, 11, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 35%, rgba(5, 150, 105, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 50% 75%, rgba(14, 165, 233, 0.05) 0%, transparent 50%);
+}
+
+/* Premium Scrollbar for Desktop */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #02060b;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #d97706, #059669);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
